@@ -31,7 +31,7 @@ All FASTQ files must be placed in a directory named `FASTQ/` in the working dire
 
 1. Clone the repository and move into it:
 ```bash
-git clone https://github.com/<username>/Ld1S_RiboMethSeq.git
+git clone https://github.com/mikaOlami/Ld1S_RiboMethSeq.git
 cd Ld1S_RiboMethSeq
 ```
 2. Create a working directory and place FASTQ files:
