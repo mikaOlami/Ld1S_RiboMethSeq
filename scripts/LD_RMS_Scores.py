@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import pandas as pd
 from Bio import SeqIO
@@ -111,3 +112,4 @@ for thisLib in mylibs:
 
     # Write the final CSV file
     mydf.to_csv(os.path.join(ResultsDir, thisLib + ".csv"), index=False)
+
