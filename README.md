@@ -1,5 +1,5 @@
 # Ld1S_RiboMethSeq
-RiboMeth-seq analysis pipeline for Leishmania donovani LD1S
+RiboMeth-seq analysis pipeline for Leishmania donovani Ld1S
 
 This repository contains a bash-based workflow and associated scripts used to process RiboMeth-seq data, map reads to Ld1S rRNA, compute RiboMeth-related scores, and generate site-level outputs suitable for differential analysis between experimental conditions.
 
@@ -32,13 +32,16 @@ All FASTQ files must be placed in a directory named `FASTQ/` in the working dire
 ```bash
 git clone https://github.com/<username>/Ld1S_RiboMethSeq.git
 cd Ld1S_RiboMethSeq
-
+```
 2. Create a working directory and place FASTQ files:
-mkdir FASTQ
+```mkdir FASTQ
 # copy raw FASTQ files into FASTQ/
-
+```
 3. Run the pipeline from the working directory:
-bash scripts/LD_RMS_Analysis_Pipeline.sh
+```
+chmod +x scripts/LD_RMS_Analysis_Pipeline.sh # only once
+./scripts/LD_RMS_Analysis_Pipeline.sh
+```
 
 The script operates relative to the current working directory.
 
@@ -46,12 +49,12 @@ The script operates relative to the current working directory.
 
 For each sample, the bash pipeline performs the following steps:
 
-1. Mapping of paired-end reads to the LD1S rRNA reference using SMALT
+1. Mapping of paired-end reads to the Ld1S rRNA reference using SMALT
 2. Filtering and BAM generation using samtools
 3. Conversion of BAM to sorted BED format using bedtools
 4. Extraction of:
-* 5′ initiation counts
-* 3′ end counts
+- 5′ initiation counts
+- 3′ end counts
 5. Calculation of RiboMeth-related scores across samples
 
 Multiple samples are processed in parallel, while all steps within each sample are executed sequentially.
@@ -59,12 +62,13 @@ Multiple samples are processed in parallel, while all steps within each sample a
 ## Output
 
 During execution, the pipeline creates the following directories in the working directory:
-* Bams/ — rRNA-aligned BAM files
-* Beds/ — sorted BED files
-* Logs/ — per-step and global log files
-* Additional per-sample outputs include:
-* *.init — initiation (5′) count files
-* *.3p — 3′ end count files
+* Bams/ - rRNA-aligned BAM files
+* Beds/ - sorted BED files
+* Logs/ - per-step and global log files
+
+Additional per-sample outputs include:
+* *.init - initiation (5′) count files
+* *.3p - 3′ end count files
 * CSV files containing site-level RiboMeth-related scores
 
 ## Differential analysis criteria
@@ -76,6 +80,6 @@ Sites are considered significantly regulated if they meet all of the following c
 
 ## Reference files
 
-All reference files used by the pipeline are provided in the DB/ directory, including the Ld1S rRNA FASTA sequence, genome size file, and pre-built SMALT index.
+All reference files used by the pipeline are provided in the `DB/` directory, including the Ld1S rRNA FASTA sequence, genome size file, and pre-built SMALT index.
 
 Details on reference construction and file contents are provided in `DB/README_DB.md`.
