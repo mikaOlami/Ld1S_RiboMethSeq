@@ -8,7 +8,7 @@ This repository contains a bash-based workflow and associated scripts used to pr
 The pipeline was developed and tested using:
 
 - smalt **v0.7.6**
-- samtools **v1.9**
+- samtools **v1.9** installed via conda (bioconda).
 - bedtools **v2.30.0**
 - Python **v3.10.9**
 - Rscript **v4.5.2**
