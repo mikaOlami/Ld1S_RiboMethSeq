@@ -32,7 +32,7 @@ fasta_path = os.path.join(
     REPO_DIR,
     "DB",
     "rRNA",
-    "LD1S_rRNA.fa"
+    "Ld1S_rRNA.fa"
 )
 myfasta = SeqIO.parse(fasta_path, "fasta")
 rRNA_sequence = next(myfasta).seq
@@ -112,4 +112,5 @@ for thisLib in mylibs:
 
     # Write the final CSV file
     mydf.to_csv(os.path.join(ResultsDir, thisLib + ".csv"), index=False)
+
 
