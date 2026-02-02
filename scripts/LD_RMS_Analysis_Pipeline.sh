@@ -27,7 +27,7 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="${REPO_DIR:-"$(cd -- "${SCRIPT_DIR}/.." && pwd)"}"
 
 # ---- Reference paths inside repo ----
-rRNA_DB="${REPO_DIR}/DB/rRNA/smalt_index/LD_rRNA_smalt_index"
+rRNA_DB="${REPO_DIR}/DB/rRNA/LD_rRNA_smalt_index"
 genome="${REPO_DIR}/DB/rRNA/LD_rRNA.genome"
 
 # ---- Script paths inside repo ----
