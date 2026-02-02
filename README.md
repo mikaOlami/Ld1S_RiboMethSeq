@@ -11,6 +11,7 @@ The pipeline was developed and tested using:
 - samtools **v1.9**
 - bedtools **v2.30.0**
 - Python **v3.10.9**
+- Rscript **v4.5.2**
 - bash (Linux environment)
 
 Paths to executables and reference files are defined at the top of `LD_RMS_Analysis_Pipeline.sh` and can be edited as needed.
