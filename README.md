@@ -1,5 +1,5 @@
 # Ld1S_RiboMethSeq
-RiboMeth-seq analysis pipeline for Leishmania donovani Ld1S
+RiboMeth-seq analysis pipeline for *Leishmania donovani* Ld1S
 
 This repository contains a bash-based workflow and associated scripts used to process RiboMeth-seq data, map reads to Ld1S rRNA, compute RiboMeth-related scores, and generate site-level outputs suitable for differential analysis between experimental conditions.
 
